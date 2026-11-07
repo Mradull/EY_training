@@ -1,0 +1,18 @@
+[
+    {
+        "reservation_id": 1,
+        "book_id": 101,
+        "book_title": "Python Crash Course",
+        "customer_name": "mradul",
+        "reservation_date": "2026-11-07 18:16:01",
+        "status": "Confirmed"
+    },
+    {
+        "reservation_id": 2,
+        "book_id": 102,
+        "book_title": "Automate the Boring Stuff with Python",
+        "customer_name": "mradul",
+        "reservation_date": "2026-11-08 03:18:19",
+        "status": "Confirmed"
+    }
+]
