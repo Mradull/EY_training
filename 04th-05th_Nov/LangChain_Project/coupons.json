@@ -1,0 +1,14 @@
+{
+  "coupons": [
+    {"code": "NEXUS15", "discount": 15, "active": true},
+    {"code": "UPSKILL12", "discount": 12, "active": true},
+    {"code": "FUTURE20", "discount": 20, "active": true},
+    {"code": "CAMPUS08", "discount": 8, "active": true},
+    {"code": "BRIGHT15", "discount": 15, "active": true},
+    {"code": "GROWTH10", "discount": 10, "active": true},
+    {"code": "INNOVATE18", "discount": 18, "active": true},
+    {"code": "MINDSPARK12", "discount": 12, "active": true},
+    {"code": "DISCOVER20", "discount": 20, "active": true},
+    {"code": "NEXTSTEP10", "discount": 10, "active": true}
+  ]
+}
