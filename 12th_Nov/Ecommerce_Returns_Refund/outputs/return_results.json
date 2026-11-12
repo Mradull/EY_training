@@ -1,0 +1,292 @@
+[
+    {
+        "request_id": "RET201",
+        "order_id": "ORD-7301",
+        "product": "Wireless Keyboard",
+        "amount_inr": 1499,
+        "eligibility_findings": {
+            "eligible": true,
+            "issues": [],
+            "findings": [
+                "Product amount is within the limit.",
+                "Return request is within 30 days.",
+                "Customer invoice is available.",
+                "Item condition meets the policy.",
+                "Customer return frequency is within the limit."
+            ]
+        },
+        "eligibility_explanation": "Assessment summary\n- Deterministic policy result: Eligible = true; no issues flagged. I will not override this outcome.\n\nEligible conditions (per provided findings)\n- Product amount is within the allowed limit.\n- Return request is within the allowed time window (6 days since delivery; within 30 days).\n- Customer provided the invoice.\n- Item condition is UNOPENED and meets the policy requirement.\n- Customer’s prior return frequency (0 in 90 days) is within limits.\n\nPolicy violations\n- None. The deterministic policy returned no issues.\n\nExceptions requiring manager review\n- None. No exceptions or flags were raised by the deterministic policy that would require human review.\n\nNotes\n- I am not approving or rejecting the refund; I only confirm the automated policy findings above. If you need wording for customer communications or next operational steps (shipping label, refund method, timelines), I can draft that.",
+        "risk_assessment": {
+            "risk_level": "LOW",
+            "high_risks": [],
+            "medium_risks": [],
+            "assessment": "Risk Level: LOW\n\nRisk Assessment: Python analysis indicates no high or medium risks. Supporting factors: item is UNOPENED, invoice is available, days since delivery is short (6 days) and there are no previous returns in the last 90 days — all of which reduce fraud/quality concerns. Missing photo evidence slightly increases uncertainty but is mitigated by the unopened condition and invoice. The amount (INR 1,499) is not unusually high. Overall, based on provided data, the request presents low risk."
+        },
+        "approval_route": "AUTOMATIC",
+        "final_decision": "AUTO_APPROVED",
+        "customer_message": "Hi,\n\nThanks — we’ve reviewed your request (RET201 for Order ORD-7301) and your refund for the Wireless Keyboard has been approved automatically.\n\nWhy it was approved:\n- The item is within the 30-day return window.\n- The keyboard is unopened and you have the invoice on hand.\n- The return reason (wrong keyboard layout) is valid.\n\nWhat to do next:\n1. Please pack the keyboard in its original packaging with all accessories and include the invoice.\n2. Check your email or your account (Orders > Returns) for the prepaid return label and detailed drop-off/pick-up instructions. If you don’t receive the label or instructions within 24 hours, reply to this message and we’ll help.\n3. Send the item back following the provided instructions.\n\nRefund timing and notes:\n- After we receive and inspect the returned item, we will process your refund. \n- Refunds typically take a few business days to appear in your original payment method, depending on your bank or payment provider.\n- If any return fees apply, we will notify you before issuing the refund.\n\nIf you need help arranging the return or have any other questions (for example, if you’d prefer an exchange for a different layout), reply to this message and we’ll assist.\n\nThank you for shopping with us,\nCustomer Support Team"
+    },
+    {
+        "request_id": "RET202",
+        "order_id": "ORD-7302",
+        "product": "Gaming Laptop",
+        "amount_inr": 79999,
+        "eligibility_findings": {
+            "eligible": false,
+            "issues": [
+                "Product amount must be below ₹25,000.",
+                "Item condition does not meet the policy or supporting photographs are missing."
+            ],
+            "findings": [
+                "Return request is within 30 days.",
+                "Customer invoice is available.",
+                "Customer return frequency is within the limit."
+            ]
+        },
+        "eligibility_explanation": "Summary (deterministic outcome)\n- Deterministic policy result: NOT ELIGIBLE (do not override).\n- Positive findings: request is within 30 days of delivery; invoice is available; customer return frequency is within allowed limits.\n- Issues flagged by the policy engine (must be addressed): 1) product amount exceeds policy threshold, and 2) item condition or photographic support does not meet policy requirements.\n\nEligible conditions\n- Timing: Delivery-to-request interval = 12 days — within the allowable 30-day window.\n- Documentation: Customer invoice is present.\n- Return frequency: No prior returns in the 90‑day window; within frequency limits.\n\nPolicy violations (explanation of each flagged issue)\n1) Product amount must be below ₹25,000.\n   - What the result says: The policy check requires the product price to be under ₹25,000 for an automatic refund eligibility path.\n   - How this request fails: The order amount is ₹79,999, which exceeds the ₹25,000 threshold flagged by the deterministic check.\n\n2) Item condition does not meet the policy or supporting photographs are missing.\n   - What the result says: The policy requires acceptable item condition and/or adequate photographic evidence for eligibility.\n   - How this request fails: The item condition is listed as \"USED.\" Although the request indicates photo_evidence_available = true, the policy engine still flagged a condition/photo issue. That indicates either:\n     a) The “USED” condition is not acceptable under the deterministic rule applied, or\n     b) The submitted photographic evidence does not meet the policy’s required standards (quality, angles, serial number visibility, or other required views)—the deterministic output does not specify which.\n   - The deterministic output does not allow us to assume which of the two (condition vs. insufficient photos) is the precise reason; it only reports the composite issue.\n\nExceptions requiring manager (human) review — why review is needed\n- High-value item (amount > ₹25,000): The automated rule disqualifies this refund path for high-value items. A human reviewer is required to determine whether any authorized exception or alternative disposition (e.g., RMA to manufacturer, repair/replacement, or special approval) applies based on business discretion, warranty status, or other non-automated criteria.\n- Item condition / photographic ambiguity: The automated check cannot confirm whether the “USED” status alone is disqualifying or whether the photos are inadequate. A human should:\n  - Inspect the submitted photos for sufficiency (damage/performance evidence, serial number, condition).\n  - Assess whether the reported performance issue (“Performance does not meet expectations”) constitutes a manufacturing defect or other qualifying fault that could override the standard condition/amount rule.\n  - Determine whether partial remedies (repair, exchange, partial refund) or special approvals are appropriate.\n- Evidence validation: Because the deterministic result flagged evidence/condition and price simultaneously, a human review is needed to reconcile both issues and apply any non-deterministic policy exceptions or business judgment.\n\nRecommended next steps for the reviewer (concise)\n- Verify the submitted photos for clarity and required views; request additional photos or diagnostics if insufficient.\n- Confirm whether any business exceptions, warranty coverage, or manufacturer support applies to this specific high-value laptop.\n- Determine appropriate disposition (escalation, RMA, repair, partial refund, or denial) according to applicable non-automated rules.\n\nFinal note\n- The deterministic policy decision stands: eligibility = false. This assessment explains the reasons and identifies where a human review is necessary; do not treat this message as an approval or rejection.",
+        "risk_assessment": {
+            "risk_level": "HIGH",
+            "high_risks": [
+                "High-value return request."
+            ],
+            "medium_risks": [
+                "Used item requires additional inspection."
+            ],
+            "assessment": "Risk Level: HIGH\n\nExplanation of identified risks\n- High-value return request (primary HIGH risk): The item value (₹79,999) creates significant monetary exposure — higher incentive for fraud or resale of returned goods. This is the authoritative HIGH risk from Python and must be retained.\n- Used item condition (medium risk noted): A USED gaming laptop can conceal damage, upgrades, or tampering that affect resale value and complicate verification of the buyer’s performance complaint.\n- Evidence considerations: Invoice and photos are available (mitigates some risk), but photographic evidence and invoices can be forged or misleading. There is no diagnostic/benchmark data, serial number verification, or service history provided in the request to objectively confirm the reported performance issue.\n- Return frequency: previous_returns_90_days = 0 lowers concern for habitual return abuse but does not offset the high-value risk.\n- Transaction/operational risks: potential for partial or concealed damage, undisclosed hardware modifications, warranty/service eligibility issues, and higher costs for inspection, refurbishment, or loss on resale.\n\nRisk Assessment: HIGH — High monetary exposure from a high-value, used-item refund with only photos/invoice available; further technical verification (serial number check, diagnostics/benchmark logs, and thorough inspection) is warranted before completing resolution."
+        },
+        "approval_route": "MANAGER_REVIEW",
+        "final_decision": "MANAGER_APPROVED",
+        "customer_message": "Hello,\n\nThank you for contacting us about your Gaming Laptop (Order ORD-7302). I’m sorry the laptop’s performance hasn’t met your expectations.\n\nA manager has reviewed and approved your return request (RET202). Because this is a high-value, used device, we will need to perform a careful inspection once we receive the item to confirm condition and the reported performance issue before issuing any refund.\n\nNext steps\n- We will send you return-shipping instructions and a prepaid label (if applicable) within 2 business days. Please watch your email.\n- Pack the laptop securely with all original accessories, chargers, and the invoice. Include any photo evidence you have and a short note describing the performance problems.\n- Before sending, please:\n  - Remove all personal data and accounts, and perform a factory reset if possible.\n  - Remove any external storage or SIM cards.\n  - Note the laptop’s serial number in your reply or on the return form/packing slip.\n- Ship the item within 7 days of receiving the return label to keep the authorization active.\n\nWhat happens after we get the laptop\n- Our team will inspect and test the laptop to verify condition and the reported issue.\n- Final resolution (full refund, partial refund, or return denial) will be made based on that inspection and our return policy.\n- We will notify you by email when the inspection is complete and inform you of the next steps. Refunds, if approved, are processed after inspection and may take several business days to appear depending on your payment method.\n\nIf you have any questions or need help preparing the device for return, reply to this message or contact our support team and reference RET202 / ORD-7302. We appreciate your patience and will do our best to resolve this promptly."
+    },
+    {
+        "request_id": "RET203",
+        "order_id": "ORD-7303",
+        "product": "Ceramic Dinner Set",
+        "amount_inr": 2499,
+        "eligibility_findings": {
+            "eligible": true,
+            "issues": [],
+            "findings": [
+                "Product amount is within the limit.",
+                "Return request is within 30 days.",
+                "Customer invoice is available.",
+                "Item condition meets the policy.",
+                "Customer return frequency is within the limit."
+            ]
+        },
+        "eligibility_explanation": "Summary\n- Deterministic policy result: Eligible = true, no issues flagged.\n- Conclusion: The replacement request RET203 (ORD-7303) meets the automated return eligibility checks and may be processed under standard replacement workflow. I am not approving or rejecting—this is an eligibility assessment only.\n\nEligible conditions (per deterministic findings)\n- Product amount within limit: The order amount (INR 2,499) is reported as within the allowed amount for returns/replacements by the policy engine.\n- Return window met: The request was made 9 days after delivery and is reported as within the allowable return period (policy engine noted “Return request is within 30 days”).\n- Invoice available: Customer provided an invoice (invoice_available = true), which the policy requires and the engine confirmed.\n- Item condition meets policy: Item condition is \"DAMAGED\" and the engine marked “Item condition meets the policy.” Photo evidence is available (photo_evidence_available = true), supporting the damage claim.\n- Return frequency within limit: Customer had 1 previous return in the last 90 days; the engine found this to be within the allowed frequency.\n\nPolicy violations\n- None. The deterministic policy results show no violations or disqualifying issues.\n\nExceptions requiring manager/human review\n- None flagged by the deterministic policy. No exceptions requiring human review were indicated in the policy results.\n\nNotes for operations (informational)\n- The deterministic engine verified the key eligibility points listed above. If your operational process includes any additional manual verification (e.g., photo quality check, item serial number validation, or QA inspection), follow those internal steps. Those activities are procedural and are not required by the deterministic eligibility decision provided here.\n\nIf you want, I can list the exact policy findings again or prepare the information to include in the replacement authorization packet.",
+        "risk_assessment": {
+            "risk_level": "LOW",
+            "high_risks": [],
+            "medium_risks": [],
+            "assessment": "Risk Level: LOW\n\nRisk Assessment: The claim is supported and poses low risk. Invoice and photo evidence are available and consistent with “two plates arrived cracked.” The request is within a typical return window (9 days), the amount (INR 2,499) is moderate, and prior return frequency (1 in 90 days) is not excessive. Product category (fragile tableware) increases the likelihood of legitimate transit damage, but this is mitigated by the photographic evidence. No high- or medium-risk indicators were raised by the Python analysis.\n\nKey considerations:\n- Evidence: Invoice + photos present and consistent with damaged condition.\n- Return frequency: 1 prior return in 90 days — not suspicious.\n- Timing: Reported within 9 days of delivery — timely.\n- Value: Moderate transaction value — not a high-value risk.\n- Item risk: Fragile product increases chance of damage in transit but aligns with evidence.\n\nRecommended next step: Proceed with standard verification and replacement processing (e.g., validate photos against SKU/packaging, confirm damage details) — no elevated fraud concerns identified."
+        },
+        "approval_route": "AUTOMATIC",
+        "final_decision": "AUTO_APPROVED",
+        "customer_message": "Subject: Replacement Approved for Order ORD-7303 (RET203)\n\nHi,\n\nWe're sorry to hear that two plates from your Ceramic Dinner Set arrived cracked. Thank you for submitting the invoice and photos — that helped us review your request quickly.\n\nGood news: your replacement request (RET203) has been automatically approved. Next steps:\n- Our team will verify the submitted photos and invoice and proceed with arranging a replacement for the damaged items.\n- Please keep the damaged plates and original packaging until the replacement/pickup is arranged, as our carrier or team may need to inspect them.\n- We may contact you if we need any additional information. Otherwise, you’ll receive an update on the replacement status within 2–4 business days.\n\nIf you have any questions or need further assistance in the meantime, reply to this message or contact our support team and reference RET203 / ORD-7303.\n\nWe apologize for the inconvenience and appreciate your patience."
+    },
+    {
+        "request_id": "RET204",
+        "order_id": "ORD-7304",
+        "product": "Travel Suitcase",
+        "amount_inr": 4599,
+        "eligibility_findings": {
+            "eligible": false,
+            "issues": [
+                "Item condition does not meet the policy or supporting photographs are missing."
+            ],
+            "findings": [
+                "Product amount is within the limit.",
+                "Return request is within 30 days.",
+                "Customer invoice is available.",
+                "Customer return frequency is within the limit."
+            ]
+        },
+        "eligibility_explanation": "Summary (deterministic policy outcome)\n- Deterministic result: Ineligible for refund.\n- Primary reason flagged: \"Item condition does not meet the policy or supporting photographs are missing.\"\n- Other checks passed: product amount within limit, request within 30 days (4 days), invoice available, return frequency within limit.\n\nEligible conditions (what the request did meet)\n- Time window: Return requested 4 days after delivery (within 30-day window).\n- Invoice: Customer provided an invoice.\n- Price threshold: INR 4,599 is within the acceptable amount range per policy check.\n- Return frequency: No prior returns in the last 90 days.\n\nPolicy violations (exact eligibility issues)\n- Missing required evidence for damaged item: The item is reported as \"DAMAGED\" (broken wheel), but no photographic evidence was uploaded. The deterministic policy engine requires supporting photographs or equivalent proof to validate damage claims before approving a refund. Because those photos are absent, the request is marked ineligible.\n- Item condition cannot be verified: Without photos or other proof, the system cannot confirm the claimed damage or determine whether the damage occurred in shipping, after delivery, or due to customer misuse.\n\nWhy this requires manager / human review (exceptions)\n- Verification gap: A human reviewer can evaluate alternative evidence not handled by the automated check (for example: customer-supplied video, live inspection, courier damage report, or in-person store inspection).\n- Potential for acceptable exceptions: A manager can decide whether to accept other supporting documentation, contact the customer for immediate photo submission, arrange pick-up and inspection, or offer a replacement/repair outside automated criteria.\n- Fraud risk and liability assessment: Human review is needed to assess fraud risk, determine accountability (shipping carrier vs. customer), and apply discretionary remedies (partial refund, replacement, or repair) if appropriate.\n\nRecommended next steps for case handling (concise)\n- Request the customer to upload clear photos showing the broken wheel, the suitcase packaging, and the invoice (if not already uploaded).\n- If customer cannot provide photos, escalate to manager for manual review: consider requesting a live video call demonstration, arranging an inspection, or obtaining carrier damage documentation.\n- Do not approve or reject until human reviewer completes the exception assessment.\n\nNote: I have not overridden the deterministic policy output. The case is currently ineligible per the automated check due to missing supporting photographs and/or unverifiable item condition; human review is needed to consider exceptions.",
+        "risk_assessment": {
+            "risk_level": "MEDIUM",
+            "high_risks": [],
+            "medium_risks": [
+                "Damaged item has no supporting photographs."
+            ],
+            "assessment": "Risk Level: MEDIUM\n\nExplanation of identified risks\n- Authoritative classification: The Python analysis rates this request as MEDIUM and that classification is used here.\n- Primary flagged risk: The item is reported as DAMAGED but no supporting photographs were uploaded. This creates an unverifiable claim that increases the chance of an inaccurate or fraudulent refund decision and raises operational burden for inspection/disposition.\n\nConsideration of return frequency\n- previous_returns_90_days = 0: No recent return history for this customer, which reduces repeat-return/fraud signal and supports the credibility of the claim.\n\nConsideration of missing evidence\n- photo_evidence_available = false: Lack of images is the main risk driver. Without photos, it is difficult to confirm the broken wheel, assess whether damage occurred in transit or after delivery, or determine appropriate resolution (repair/replacement/refund). The short interval since delivery (4 days) partially mitigates this, as prompt reporting is consistent with genuine damage claims.\n\nConsideration of high-value request\n- amount_inr = 4599 with invoice_available = true: The claim is moderate in value and the invoice is present, which lowers transactional risk compared with no proof of purchase. Financial exposure is not extreme but non-trivial.\n\nConcise risk assessment\n- Overall MEDIUM risk: The request is plausible (timely report, no prior returns, invoice present) but the absence of photographic evidence makes the damage claim unverifiable and therefore medium risk."
+        },
+        "approval_route": "MANAGER_REVIEW",
+        "final_decision": "MANAGER_REJECTED",
+        "customer_message": "Hello,\n\nThank you for contacting us about order ORD-7304. I’m sorry to hear the Travel Suitcase arrived with a broken wheel — I understand how frustrating that must be.\n\nAfter review, we are unable to approve your refund request at this time because we don’t have any photos or video showing the damage. We need visual evidence to verify the issue and determine the appropriate next steps.\n\nIf you’re able to provide images or a short video, we’ll gladly re-evaluate your request. Helpful files to include:\n- Clear close-up photos of the broken wheel from multiple angles\n- A photo or short video showing the wheel’s malfunction (e.g., it wobbling or not rolling)\n- A photo of the full suitcase so we can see overall condition\n- A photo of the original packaging or any external shipping damage (if present)\n- A photo of your invoice/packing slip or the order confirmation (ORD-7304)\n\nHow to send them:\n- Reply to this message with attachments, or\n- Upload them via your order page in the app/website and mention this request ID\n\nOnce we receive the photos/videos, we will review and get back to you as soon as possible (typically within 3 business days) with the next steps. If you prefer, reply here and I can guide you through the upload process.\n\nWe’re sorry for the inconvenience and appreciate your cooperation."
+    },
+    {
+        "request_id": "RET205",
+        "order_id": "ORD-7305",
+        "product": "Yoga Mat",
+        "amount_inr": 1999,
+        "eligibility_findings": {
+            "eligible": false,
+            "issues": [
+                "Return request is outside the 30-day return window."
+            ],
+            "findings": [
+                "Product amount is within the limit.",
+                "Customer invoice is available.",
+                "Item condition meets the policy.",
+                "Customer return frequency is within the limit."
+            ]
+        },
+        "eligibility_explanation": "Summary decision (from deterministic policy): Not eligible for refund. The sole disqualifying issue is that the return request was made 44 days after delivery, which exceeds the policy return window (30 days).\n\nEligible conditions\n- Product amount: Within the allowed limit per policy.\n- Invoice: Customer has provided the invoice.\n- Item condition: Unopened (meets condition requirement).\n- Return frequency: No excessive prior returns in the last 90 days.\n\nPolicy violations\n- Return window exceeded: days_since_delivery = 44, which is greater than the policy window (30 days). This is the only policy violation flagged by the deterministic check and therefore causes the request to be ineligible.\n\nExceptions requiring manager/human review\n- There are no automatic exceptions indicated by the deterministic result. However, any request to override the 30-day window (for example, a goodwill refund or allowance for extenuating circumstances) is outside the automated decision logic and would require manual/manager review and authorization. Such review is needed because overturning a deterministic policy decision is a discretionary action that must be evaluated by authorized staff.\n\nNotes\n- I am not approving or rejecting the request beyond reporting the deterministic outcome. If you want to pursue an exception, route this case to manager review and include any supporting explanation from the customer (e.g., shipping delays, medical circumstances) for their assessment.",
+        "risk_assessment": {
+            "risk_level": "MEDIUM",
+            "high_risks": [],
+            "medium_risks": [
+                "Return request exceeds the standard return window."
+            ],
+            "assessment": "Risk Level: MEDIUM\n\nRisk Assessment: The Python analysis correctly flags a medium risk because the return was requested 44 days after delivery—beyond most standard return windows—which is the primary risk driver. Mitigating factors: the item is reported UNOPENED and an invoice is available, and the customer has no prior returns in the past 90 days, which reduce fraud and verification concerns. Elevating factors: no photo evidence is provided, so condition cannot be independently verified (increasing chance of dispute or inability to resell), and the late timing may require a policy exception or manual review. The INR 1,999 value is moderate and does not, by itself, create high financial exposure. Overall: medium risk due to the late return window offset by invoice and unopened condition, but missing photo evidence keeps additional scrutiny advisable."
+        },
+        "approval_route": "MANAGER_REVIEW",
+        "final_decision": "MANAGER_APPROVED",
+        "customer_message": "Hello,\n\nThank you for your return request (RET205) for order ORD-7305 — Yoga Mat. I’m writing to let you know that a manager has reviewed and approved your refund request as an exception.\n\nWhat happens next\n- We will email return instructions and a shipping label to the address on your order within 48 hours.  \n- Please pack the unopened item in its original packaging and include the invoice inside the package to help speed up processing.  \n- Once we receive and inspect the returned item, we will proceed with the refund to your original payment method and send you a confirmation email.\n\nA quick note: this return was outside our standard 30-day window, so the approval was processed as a manager exception. To avoid any delay, please follow the return instructions and include the invoice.\n\nIf you have questions or need help with the return label, reply to this message or contact our support team and we’ll assist you.\n\nThank you for your patience."
+    },
+    {
+        "request_id": "RET206",
+        "order_id": "ORD-7306",
+        "product": "Desk Lamp",
+        "amount_inr": 3299,
+        "eligibility_findings": {
+            "eligible": false,
+            "issues": [
+                "Customer has 3 or more previous returns within 90 days."
+            ],
+            "findings": [
+                "Product amount is within the limit.",
+                "Return request is within 30 days.",
+                "Customer invoice is available.",
+                "Item condition meets the policy."
+            ]
+        },
+        "eligibility_explanation": "Summary (deterministic outcome)\n- Deterministic policy result: NOT eligible for replacement.\n- Reason flagged: Customer has 3 or more previous returns within 90 days (customer has 4).\n\nEligible conditions (what the request satisfies)\n- Product price (INR 3,299) is within any stated monetary limit (per findings).\n- Request is within the allowed time window (3 days since delivery; within 30 days).\n- Customer provided invoice.\n- Item condition is UNOPENED.\n- Photo evidence is available.\n\nPolicy violations (what caused ineligibility)\n- Excessive recent returns: The deterministic policy flagged \"Customer has 3 or more previous returns within 90 days.\" This is the single disqualifying condition in the provided policy output. Because that rule evaluated to true (previous_returns_90_days = 4), the automated decision marked the request ineligible.\n\nWhy this requires human/manager review (exceptions and what to check)\n- Deterministic rules do not consider all context. A human reviewer should evaluate exceptions such as:\n  - Possible fulfillment error (customer reports \"incorrect color delivered\") — photos and order/packing records could confirm an item-mismatch that may warrant an exception despite return history.\n  - Dispute about the return-history count or identity (customer claims returns attributed to a different account/order).\n  - Evidence of vendor/shipping fault or product defect that repeatedly caused returns for reasons outside customer control.\n  - Goodwill or escalated customer-service considerations that business teams may choose to grant.\n- For any escalation, reviewer should verify the invoice, photo evidence showing incorrect color, order/packing/shipping logs, and the returns history details before making a discretionary exception.\n\nNotes / next steps\n- Per instruction, I am not approving or rejecting this request; I confirm the automated policy result: ineligible due to prior-return threshold.\n- Recommend manager review the corroborating evidence (photos, invoice, fulfillment records) if the customer claims a fulfillment error or disputes the return-history attribution.",
+        "risk_assessment": {
+            "risk_level": "HIGH",
+            "high_risks": [
+                "Unusually frequent customer returns."
+            ],
+            "medium_risks": [],
+            "assessment": "Risk Level: HIGH\n\nExplanation of identified risks:\n- Python flagged \"Unusually frequent customer returns.\" This is authoritative and indicates elevated fraud/abuse risk.\n- Frequent-return behavior can indicate wardrobing/reselling or systematic exploitation of replacement policies, increasing loss exposure.\n\nReturn frequency:\n- The customer has 4 returns in the last 90 days, which is an elevated frequency for a single account and materially raises the probability of non-legitimate return activity. This alone is a strong risk signal.\n\nMissing evidence:\n- Invoice_available = true and photo_evidence_available = true and item_condition = UNOPENED — no critical evidence is missing. However, photos and invoice should be verified for consistency (photos showing the delivered color/package labeling, invoice/order SKU matching item) to rule out false claims.\n\nHigh-value / transaction risk:\n- Amount = INR 3,299 is a moderate-value item; repeated replacements at this value cumulatively increase financial exposure. Replacement (vs. refund) may be exploited to obtain multiple items over time.\n- As the claim is \"Incorrect color delivered,\" ensure verification of returned item packaging and courier manifest; unopened condition simplifies verification but also raises scrutiny that the claimed error could be a pretext.\n\nConcise Risk Assessment:\nHIGH — Elevated risk due to unusually frequent returns (4 in 90 days). Although invoice and photo evidence are present and item is unopened, the high return frequency materially increases the chance of abuse; verification of photos, invoice/SKU, and courier records is recommended before processing replacement."
+        },
+        "approval_route": "MANAGER_REVIEW",
+        "final_decision": "MANAGER_REJECTED",
+        "customer_message": "Hello,\n\nThank you for contacting us about order ORD-7306 (Desk Lamp). I’m sorry the lamp arrived in the wrong color — and thank you for providing the invoice and photos.\n\nA manager reviewed your replacement request and, after careful consideration, we are unable to approve a replacement at this time. Our policies limit the number of returns/replacements on an account within a short timeframe to help prevent misuse, and your account has exceeded that allowance in the last 90 days.\n\nIf you believe this decision is incorrect, please reply with any additional information you’d like us to consider (for example, clearer photos showing the delivered color and packaging labels, or other documentation). We will re-examine the case upon receiving further details.\n\nIf you’d prefer help with next steps (such as returning the item or exploring other resolution options), reply here and we’ll guide you through what’s available.\n\nWe apologize for the inconvenience and appreciate your understanding."
+    },
+    {
+        "request_id": "RET207",
+        "order_id": "ORD-7307",
+        "product": "Coffee Grinder",
+        "amount_inr": 6999,
+        "eligibility_findings": {
+            "eligible": false,
+            "issues": [
+                "Customer invoice is missing."
+            ],
+            "findings": [
+                "Product amount is within the limit.",
+                "Return request is within 30 days.",
+                "Item condition meets the policy.",
+                "Customer return frequency is within the limit."
+            ]
+        },
+        "eligibility_explanation": "Summary assessment (do not treat as approval/rejection):\n- Deterministic policy result: Ineligible (per provided policy output).\n- Reason: Missing customer invoice is the sole policy issue flagged. All other eligibility conditions were reported as met.\n\nEligible conditions (per deterministic findings)\n- Product amount is within the policy limit.\n- Return request is within the 30-day window (11 days since delivery).\n- Item condition meets the policy (UNOPENED).\n- Customer return frequency is within allowed limits (0 previous returns in 90 days).\n\nPolicy violations (explicit issues from deterministic output)\n- Customer invoice is missing.\n  - The request data shows invoice_available: false and the deterministic policy output lists \"Customer invoice is missing.\" as the only issue.\n  - Because the invoice is absent, the automated policy engine marked the request ineligible.\n\nExceptions requiring manager/human review (why manual review is needed)\n- Missing invoice requires human review to validate the purchase and prevent fraudulent or unverifiable returns:\n  - A human reviewer can attempt to verify the order using available identifiers (order_id ORD-7307) or request alternative proofs of purchase from the customer (e.g., order confirmation email, gift receipt), which the automated check could not validate.\n  - Manual review is also required to assess the \"duplicate gift\" context and determine whether a gift-return exception or alternate handling should apply.\n- The deterministic output did not flag any other issues; therefore human review should focus on verifying purchase authenticity and any possible acceptable substitutes for the missing invoice.\n\nRecommended next actions for the reviewer (informational, not a policy change)\n- Verify the order_id ORD-7307 in internal systems.\n- Request or validate alternative proof of purchase from the customer if internal lookup is inconclusive.\n- If purchase is verified, apply the standard refund process; otherwise, deny per policy or escalate per company procedures.\n\nNote: I have not overridden or altered the deterministic policy outcome; the request remains marked ineligible due to the missing invoice and requires human review to resolve that exception.",
+        "risk_assessment": {
+            "risk_level": "HIGH",
+            "high_risks": [
+                "Invoice evidence is missing."
+            ],
+            "medium_risks": [],
+            "assessment": "Risk Level: HIGH\n\nSummary of request (key facts)\n- Product: Coffee Grinder (Kitchen Appliances), amount INR 6,999\n- Days since delivery: 11; item condition: UNOPENED\n- Invoice: not available (no proof of purchase)\n- Photo evidence: not available\n- Previous returns (90d): 0\n\n1) Identified risks (explanation)\n- Missing invoice (authoritative HIGH risk): without an invoice/order confirmation the seller cannot verify that this item was purchased in this order or by this customer. This is the explicit HIGH risk flagged by the Python analysis and remains authoritative.\n- Missing photo evidence: no visual proof of item condition or packaging; increases risk that the return will be later disputed or that the claim does not match the shipped product.\n- High-value exposure: INR 6,999 is material enough that processing without proof increases financial and fraud exposure compared with low-value items.\n- Return reason (“duplicate gift”) is plausible but easier to exploit when no purchase evidence exists (e.g., returning a gifted item without receipt).\n\n2) Return frequency\n- Previous returns in 90 days = 0, which is a mitigating signal (low frequency), but it does not mitigate the PRIMARY HIGH risk (missing invoice).\n\n3) Missing evidence implications\n- No invoice -> cannot validate purchase date, payment method, or order linkage.\n- No photos -> cannot validate unopened condition remotely; increases likelihood of chargebacks or disputes.\n\n4) Transaction risks\n- Financial exposure and potential for fraudulent returns are elevated due to missing documentation for a moderately high-priced appliance.\n- Time since delivery (11 days) is within typical return windows, but that alone doesn’t mitigate documentation gaps.\n\nConcise risk assessment\n- HIGH: The missing invoice is the decisive risk driver; combined with absent photo evidence and a non-trivial order value, the request represents elevated fraud and financial risk despite no recent return history. Recommend obtaining verifiable proof of purchase (invoice/order confirmation or payment record) and photo evidence of the sealed item before proceeding with refund processing."
+        },
+        "approval_route": "MANAGER_REVIEW",
+        "final_decision": "MANAGER_REJECTED",
+        "customer_message": "Subject: Return request RET207 — Decision for Order ORD-7307\n\nHi,\n\nThank you for contacting us about your Coffee Grinder (Order ORD-7307). I’m sorry for the inconvenience.\n\nAfter reviewing your refund request, we’re unable to approve it at this time because we do not have an invoice or other proof of purchase to verify the order. While the item is within the return window and appears to be unopened, a valid proof of purchase (invoice, order confirmation, payment screenshot, or gift receipt) is required to process refunds.\n\nWhat you can do next\n- If you have any of the following, please send them so we can re-review your request:\n  - Invoice, order confirmation email, or merchant receipt\n  - Screenshot of the payment or bank statement showing the purchase\n  - Gift receipt or order number from the person who bought it for you\n- Please also include a photo showing the sealed/unopened packaging to help verify item condition.\n\nHow to submit documents\n- Reply to this message with attachments, or upload the files from your account order page for ORD-7307.\n\nTimeline\n- If you provide the requested documents, we will review them and get back to you as soon as possible (typically within a few business days).\n\nIf you don’t have a proof of purchase, you may consider contacting the person who gifted the item or the original seller for a gift return/exchange option.\n\nI’m sorry we couldn’t approve your request right away. If you have any questions or need help locating possible proof of purchase, please let me know and I’ll assist."
+    },
+    {
+        "request_id": "RET208",
+        "order_id": "ORD-7308",
+        "product": "Sketchbook Set",
+        "amount_inr": 1099,
+        "eligibility_findings": {
+            "eligible": true,
+            "issues": [],
+            "findings": [
+                "Product amount is within the limit.",
+                "Return request is within 30 days.",
+                "Customer invoice is available.",
+                "Item condition meets the policy.",
+                "Customer return frequency is within the limit."
+            ]
+        },
+        "eligibility_explanation": "Summary (Request RET208 — ORD-7308)\n- Deterministic policy result: ELIGIBLE (no issues flagged).\n- I will not approve or reject; this is an assessment only.\n\nEligible conditions\n- Product amount is within the limit: The policy check returned \"Product amount is within the limit,\" meaning the INR 1,099 refund request does not exceed the configured monetary threshold for automatic returns.\n- Return request is within 30 days: \"Return request is within 30 days\" — days_since_delivery = 14, so the request falls inside the allowed return window.\n- Customer invoice is available: invoice_available = true, so the required proof of purchase is present.\n- Item condition meets the policy: item_condition = UNOPENED, satisfying the condition requirement for this category/return type.\n- Customer return frequency is within the limit: previous_returns_90_days = 1 and the policy’s frequency check passed, so the customer is not exceeding the allowed number of returns in the rolling period.\n\nPolicy violations\n- None. The deterministic policy results show no violations or flagged issues.\n\nExceptions requiring manager review\n- None. No exceptions were raised by the deterministic policy engine that would require human/manager review.\n\nNotes / next steps (for operations)\n- Proceed with your standard refund workflow for eligible returns (verification of invoice copy, initiate refund per payment method, update order status), if no non-policy operational checks remain.\n- If you require a manager’s discretion for any business reason not captured by the deterministic policy (e.g., promotional exceptions, suspect fraud investigations, or cross-checks with other systems), escalate separately — none were indicated by the policy output.\n\nIf you want, I can format a checklist for the returns team to follow before processing.",
+        "risk_assessment": {
+            "risk_level": "LOW",
+            "high_risks": [],
+            "medium_risks": [],
+            "assessment": "Risk Level: LOW\n\nRisk Assessment: Python's analysis is authoritative and indicates LOW risk. Rationale: the item is returned unopened and the invoice is available, delivery was 14 days ago (within typical return windows), and the customer has only one previous return in 90 days (low return frequency). Missing photo evidence is a minor concern but not critical for an unopened product. The refund amount (₹1,099) is not high-value, so financial exposure is limited. No high or medium risk flags were identified by the Python analysis."
+        },
+        "approval_route": "AUTOMATIC",
+        "final_decision": "AUTO_APPROVED",
+        "customer_message": "Hello,\n\nThank you for contacting us about your Sketchbook Set (Order ORD-7308). Good news — your return request (RET208) has been automatically approved.\n\nReason for approval\n- The item is within the 30-day return window, unopened, and you have the invoice — so the return meets our policy.\n\nNext steps\n1. We will email a prepaid return label and detailed drop-off instructions within 24 hours.  \n2. Please pack the Sketchbook Set in its original packaging and include the invoice copy.  \n3. Attach the return label and drop the package at the courier location indicated in the email.\n\nRefund details\n- Once we receive and inspect the unopened item, we will process a refund of ₹1,099 to your original payment method. Refunds typically take 5–7 business days to appear on your account after we initiate them; timing depends on your bank or payment provider.\n\nIf you need a different return option (pickup) or have any questions, reply to this message or contact our support team with your request ID RET208 and order number ORD-7308. We’re here to help.\n\nThank you for shopping with us and apologies for the inconvenience with the size."
+    },
+    {
+        "request_id": "RET209",
+        "order_id": "ORD-7309",
+        "product": "Smartwatch",
+        "amount_inr": 18900,
+        "eligibility_findings": {
+            "eligible": false,
+            "issues": [
+                "Item condition does not meet the policy or supporting photographs are missing."
+            ],
+            "findings": [
+                "Product amount is within the limit.",
+                "Return request is within 30 days.",
+                "Customer invoice is available.",
+                "Customer return frequency is within the limit."
+            ]
+        },
+        "eligibility_explanation": "Summary (deterministic outcome)\n- Deterministic policy result: INELIGIBLE for refund (do not override).\n- Primary issue flagged: \"Item condition does not meet the policy or supporting photographs are missing.\"\n\nEligible conditions (positive findings)\n- Request is within the allowed time window: 22 days since delivery (within 30 days).\n- Product amount (₹18,900) is within the configured limit.\n- Customer has provided the invoice.\n- Customer’s return frequency in the last 90 days is within allowed limits (0 previous returns).\n\nPolicy violations (why the request is marked ineligible)\n- Item condition: The request data shows the item condition = \"USED\". The deterministic result indicates the item condition does not meet the policy. The automated rule therefore flagged the condition of the product as noncompliant with return requirements.\n- Photographic evidence ambiguity: The deterministic issue message also allows for the alternative that supporting photographs are missing or inadequate. Although the request shows photo_evidence_available = true, the automated check still flagged a problem in this area (either missing, inadequate, or not meeting required standards).\n\nExceptions requiring manager/human review (reasoning and what to verify)\nBecause the deterministic output groups two possible causes into one issue, a human review is required to disambiguate and resolve the problem:\n1. Verify item condition vs policy\n   - Confirm whether “USED” items of this Wearables/Smartwatch SKU are eligible for refunds under the store’s return policy (some wearables are non-returnable once used due to hygiene/packaging rules or specific SKU exclusions).\n   - Inspect return notes and order history for signs of prior activation or modifications that would make the product non-returnable.\n2. Assess photographic evidence quality\n   - Review the images the customer supplied to confirm they were actually uploaded and whether they clearly show the reported defect (battery behavior/diagnostics, charging evidence, device screen, serial/IMEI if required).\n   - Determine if additional or higher-quality photos or a diagnostic log are required to substantiate the battery-life claim.\n3. Determine defect vs acceptable variation / warranty\n   - Verify whether the battery-life issue is a manufacturing/defect warrantable condition (may be handled via warranty service rather than a refund).\n   - If the device shows signs of misuse/physical damage that would void returns, document those findings.\n4. Confirm documentation and eligibility exceptions\n   - Ensure the invoice and any other required paperwork are valid and match the product.\n   - Check for any SKU-specific exceptions (refurbished/clearance items, open-box non-returnable labels).\n\nRequested actions for human reviewer (concise)\n- Review the supplied photos for adequacy and relevance to the battery-life complaint.\n- Confirm policy for returns of USED wearables and whether this SKU is excluded.\n- If photos are inadequate, request additional evidence or diagnostic logs from the customer.\n- If the product is warrantable rather than refundable, route to warranty/service team and document reason.\n\nNote: The deterministic policy result (ineligible) stands and must not be overridden automatically; a human review is required to resolve the ambiguous issue(s) identified.",
+        "risk_assessment": {
+            "risk_level": "MEDIUM",
+            "high_risks": [],
+            "medium_risks": [
+                "Used item requires additional inspection."
+            ],
+            "assessment": "Risk Level: MEDIUM\n\nExplanation of identified risks\n- Primary flagged risk: item is USED — used electronics require additional inspection to verify condition, extent of use, and whether reported defect (battery life) is legitimate or caused by user behavior/accessories/software.\n- Technical ambiguity: battery-life complaints are hard to prove from photos alone; they typically require device diagnostics or battery-health logs to substantiate.\n- Financial exposure: at INR 18,900 this is a relatively high-value item for a wearable, increasing the financial/resale risk if a claim is accepted without proper verification.\n\nReturn frequency\n- previous_returns_90_days = 0 — low return frequency for this customer mitigates repeat-return/fraud concerns and lowers behavioral risk.\n\nMissing or insufficient evidence\n- Invoice_available = true and photo_evidence_available = true — these mitigate risk.\n- However, photos do not validate battery performance; additional evidence recommended: battery-health/diagnostic report, screenshots of battery stats, serial/IMEI match to invoice, and confirmation that device has not been factory-reset/altered since delivery.\n\nHigh-value considerations\n- Because the amount is high, insist on technical verification before financial remediation: battery diagnostics, functional test, and serial/invoice reconciliation to protect resale value and prevent misuse.\n\nConcise risk assessment\n- MEDIUM: The combination of a used, high-value smartwatch and a battery-performance complaint means additional technical inspection is needed before refund. Existing invoice and photos reduce risk but are not conclusive for battery issues; low prior return frequency is a mitigating factor. Recommend obtaining device battery diagnostics and serial verification prior to processing."
+        },
+        "approval_route": "MANAGER_REVIEW",
+        "final_decision": "MANAGER_APPROVED",
+        "customer_message": "Hello — thank you for contacting us about your Smartwatch (Order ORD-7309, Request RET209).\n\nA manager has reviewed and approved your refund request. Because the item is a used smartwatch and the issue reported (battery life) requires technical verification, we’ll need to complete a short inspection and verification before the refund can be finalized.\n\nWhat we already have\n- Invoice: received — thank you.\n- Photos: received — thank you.\n\nWhat we need from you before/with the return\n- Battery diagnostics / evidence: screenshots of the battery health/usage screen, any battery/diagnostic logs, or a short video demonstrating the battery issue.\n- Serial number / IMEI: a photo of the watch’s back or Settings screen showing the serial/IMEI so we can match it to the invoice.\n- Condition photos: if possible, clear photos of the watch (front, back, sides) and any included accessories or charger.\n- Do not factory-reset the device before return. Please ensure the watch can be powered on and is accessible for basic diagnostics. If there are activation locks or you can’t remove them, let us know and we’ll advise.\n- Include the original invoice and any accessories/charger in the return shipment if available.\n\nNext steps and timing\n- We will email you a prepaid return shipping label and packing instructions within 2 business days.\n- Please ship the item using that label within 7 days of receiving it.\n- Once we receive the watch, our inspection and diagnostics typically take up to 7 business days. We will update you by email with the inspection results.\n- If the diagnostics confirm the reported battery issue and the item meets the return requirements, we will proceed with the refund. If additional information is needed, we’ll contact you.\n\nIf you have any questions or cannot provide any of the requested items, reply to this message and we’ll help you with alternatives. We appreciate your patience — we want to resolve this as quickly and fairly as possible."
+    },
+    {
+        "request_id": "RET210",
+        "order_id": "ORD-7310",
+        "product": "Floor Mirror",
+        "amount_inr": 12500,
+        "eligibility_findings": {
+            "eligible": true,
+            "issues": [],
+            "findings": [
+                "Product amount is within the limit.",
+                "Return request is within 30 days.",
+                "Customer invoice is available.",
+                "Item condition meets the policy.",
+                "Customer return frequency is within the limit."
+            ]
+        },
+        "eligibility_explanation": "Assessment for return request RET210 (Order ORD-7310)\n\nSummary verdict (per deterministic policy results)\n- Deterministic result: ELIGIBLE = true\n- No issues reported by the automated policy check\n- Findings from the policy check:\n  - Product amount is within the limit.\n  - Return request is within 30 days.\n  - Customer invoice is available.\n  - Item condition meets the policy (DAMAGED).\n  - Customer return frequency is within the limit.\n\nEligible conditions\n- The request meets all documented eligibility findings: the replacement request is within the allowable time window, the order amount (₹12,500) is within the permitted range, the customer has provided an invoice and photo evidence, the item is reported as damaged (frame cracked) which aligns with replacement for damaged goods, and there are no recent return-frequency flags.\n- Based on the deterministic policy output, this request qualifies for standard replacement processing.\n\nPolicy violations\n- None. The deterministic policy check reports no violations or disqualifying issues for this request.\n\nExceptions requiring manager/human review\n- None identified by the deterministic policy. There are no flagged exceptions that require escalation according to the provided policy results.\n\nNotes / next step\n- Do not approve or reject in this assessment. Per the policy output, the case is eligible; proceed with your standard replacement workflow or system action for eligible replacement requests. If any additional evidence or conflicting information arises (not present in the current inputs), re-check and escalate as required.",
+        "risk_assessment": {
+            "risk_level": "LOW",
+            "high_risks": [],
+            "medium_risks": [],
+            "assessment": "Risk Level: LOW\n\nRisk Assessment: Evidence supports a low-risk replacement. Photo evidence and an invoice are provided and the customer has no prior returns in 90 days, which lowers fraud/abuse concerns. The item is reported damaged (frame cracked) 17 days after delivery—consistent with shipping/handling damage rather than tampering. The request amount (₹12,500) is notable but is backed by documentation; standard verification/inspection is prudent but there are no medium or high-risk flags in the Python analysis. Overall risk is LOW."
+        },
+        "approval_route": "AUTOMATIC",
+        "final_decision": "AUTO_APPROVED",
+        "customer_message": "Hello,\n\nThank you for contacting us about your Floor Mirror (Order ORD-7310). We’re very sorry the frame arrived cracked.\n\nGood news — your replacement request (RET210) has been automatically approved based on the invoice and the photos you provided. We understand this is frustrating and appreciate you sharing the evidence.\n\nNext steps\n- We will contact you within 48 hours to confirm pickup or return instructions and to schedule a convenient time. Please confirm if the pickup address should be the same as the delivery address on your order or provide an alternate address.\n- Please keep the mirror and any original packaging and accessories together and accessible for pickup. If original packaging is not available, please secure the item as best as possible to avoid further damage.\n- Once the damaged item is collected and inspected, we will proceed with the replacement. We will send you updates through your account and email at key steps of the process.\n\nIf we need any additional information, we’ll reach out. Otherwise, no further action is required from you right now.\n\nIf you have questions or need to change pickup details, reply to this message or contact our support team through your account. We apologize again for the inconvenience and appreciate your patience while we get this resolved."
+    }
+]
