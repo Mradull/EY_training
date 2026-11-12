@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/Local_HuggingFace_RAG/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/11th_Nov/EmployeeLeaveManagement/.venv" />
     </content>
     <orderEntry type="jdk" jdkName="~\PycharmProjects\EY_training\.venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
