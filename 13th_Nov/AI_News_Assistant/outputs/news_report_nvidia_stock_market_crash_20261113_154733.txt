@@ -1,0 +1,102 @@
+=================================================================
+AI NEWS ASSISTANT - NEWS BRIEFING
+=================================================================
+
+Date: 13 November 2026
+Topic: nvidia stock market crash
+Audience: All Employees
+
+SUBJECT:
+Technology News Update: nvidia stock market crash
+
+HELLO,
+
+Here is your latest technology news briefing, covering important developments from recent reports.
+
+TOP FIVE KEY NEWS POINTS
+-----------------------------------------------------------------
+
+1. With the leadership of Nvidia in turmoil, investors faced uncertainty about the sustainability of the artificial intelligence trade and how the problems inside one of the technology industry’s most important companies could affect the broader economy.
+   Status: needs verification
+   Confidence: low
+   Priority: high
+   Sources:
+      - https://www.nytimes.com/2026/11/12/business/nvidia-stock-price-jensen-huang-ceo-affair.html
+
+2. Given Nvidia's central role to the artificial intelligence (AI) theme, heavy selling pressure could extend into other technology stocks.
+   Status: needs verification
+   Confidence: low
+   Priority: high
+   Sources:
+      - https://www.fool.com/investing/2026/11/12/prediction-nvidia-s-plunging-stock-price-is-the-beginning-of-a-broader-stock-market-correction-here-s-what-warren-buffett-would-do
+
+3. [...] The artificial intelligence (AI) revolution has created outsize wealth for growth investors over the last several years.
+   Status: needs verification
+   Confidence: low
+   Priority: high
+   Sources:
+      - https://www.fool.com/investing/2026/11/12/prediction-nvidia-s-plunging-stock-price-is-the-beginning-of-a-broader-stock-market-correction-here-s-what-warren-buffett-would-do
+
+4. [...] If investors interpret Nvidia's leadership transition as a reason to reassess the entire AI trade, selling pressure could begin spreading across other technology stocks.
+   Status: needs verification
+   Confidence: low
+   Priority: high
+   Sources:
+      - https://www.fool.com/investing/2026/11/12/prediction-nvidia-s-plunging-stock-price-is-the-beginning-of-a-broader-stock-market-correction-here-s-what-warren-buffett-would-do
+
+5. # NVIDIA
+ID: TXRhn2TKUD7t
+Website: www.nvidia.com/
+Legal name: NVIDIA Corporation
+Headquarters: Santa Clara, California, United States
+LinkedIn: www.linkedin.com/company/nvidia · 6,578,529 followers
+Industry: Computer Hardware Manufacturing
+Industry codes: SIC 73, 737, NAICS 33, 334
+Company type: Public company
+Founded: 1993
+Business model: B2B, B2C
+SaaS: no [...] ## Financials
+- Stock: Nasdaq:NVDA · IPO 1999-01-22
+- Annual revenue: 215.94B USD
+- Quarterly revenue: 57.01B USD
+- Market cap: 3.46T USD as of 2024-10-29
+- Q1, 2027: revenue 81.62B gross profit 61.16B EBIT 53.54B net income 58.32B EPS 2.390000104904175 USD
+- Q1, 2027: revenue 81.62B gross profit 61.16B EBIT 53.54B net income 58.32B EPS 2.390000104904175 USD
+- FY, 2026: revenue 215.94B gross profit 153.46B EBIT 130.39B net income 120.07B EPS 4.900000095367432 USD [...] ## Funding
+- Rounds: 13
+- Total raised: 29.09B USD
+- Investors: Sequoia Capital, Grand 365 Capital, TriplePoint Capital, ARPA-E, Oracle, SoftBank, Eagle Strategies, SoftBank Vision Fund, ARK Investment Management, DARPA
+- Last round: Post-IPO Debt 2026-06-01 25.00B USD
+- Post-IPO Debt 2026-06-01 25.00B USD
+- Secondary Market 2025-11-01
+- Post-IPO Equity 2025-03-01
+- Post-IPO Equity 2023-06-01
+- Grant 2023-05-09 5.00M USD
+- Post-IPO Equity 2023-03-01
+- Post-IPO Equity 2022-08-09 65.00M USD
+   Status: needs verification
+   Confidence: low
+   Priority: high
+   Sources:
+      - https://tavily.com/knowledge/company/TXRhn2TKUD7t
+
+RECOMMENDED ACTION
+-----------------------------------------------------------------
+Employees are encouraged to review the developments and follow official company guidance where relevant.
+
+VERIFICATION NOTES
+-----------------------------------------------------------------
+- Analysis performed using rule-based Python processing.
+- No external language model was used.
+- Text similarity is only an initial comparison, not proof.
+- All claims should be checked against their original articles.
+
+IMPORTANT DISCLAIMER
+-----------------------------------------------------------------
+This briefing is generated using automated, rule-based text processing.
+Confidence labels are preliminary indicators and do not represent independent fact verification.
+Please consult the original articles before making decisions.
+
+Regards,
+AI News Assistant
+=================================================================

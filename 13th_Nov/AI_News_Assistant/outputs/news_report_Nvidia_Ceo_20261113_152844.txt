@@ -1,0 +1,75 @@
+=================================================================
+AI NEWS ASSISTANT - NEWS BRIEFING
+=================================================================
+
+Date: 13 November 2026
+Topic: Nvidia Ceo
+Audience: All Employees
+
+SUBJECT:
+Technology News Update: Nvidia Ceo
+
+HELLO,
+
+Here is your latest technology news briefing, covering important developments from recent reports.
+
+TOP FIVE KEY NEWS POINTS
+-----------------------------------------------------------------
+
+1. Jones Appointed First-Ever Chair of the Board
+
+NVIDIA (NASDAQ: NVDA) Board of Directors announced today that Jensen Huang has resigned as President, Chief Executive Officer, and a member of the Board, effective immediately.
+   Status: needs verification
+   Confidence: low
+   Priority: high
+   Sources:
+      - https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition
+
+2. [...] The $4.2 trillion tech giant has lost more than $600bn in market value this week as Huang’s scandals rocked the company, which supplies most of the chips powering advanced AI technology.
+   Status: needs verification
+   Confidence: low
+   Priority: high
+   Sources:
+      - https://www.aljazeera.com/news/2026/11/12/ai-titan-jensen-huang-out-as-nvidia-ceo
+
+3. The decision comes days after the company took the extraordinary step of launching an investigation following news reports alleging that Huang had had an extramarital affair with one of the company's clients, who U.S.
+   Status: needs verification
+   Confidence: low
+   Priority: high
+   Sources:
+      - https://www.npr.org/2026/11/12/nx-s1-6037833/jensen-huang-nvidia-stepped-down
+
+4. READ MORE: Nvidia announced a software tool to stop rogue AI.
+   Status: needs verification
+   Confidence: low
+   Priority: high
+   Sources:
+      - https://www.pbs.org/newshour/world/nvidia-investigates-whether-ceo-jensen-huang-was-targeted-by-chinese-spy-when-he-had-affair
+
+5. [...] Nvidia's board said it has "no reason to believe" that either national security or Nvidia secrets were compromised, but that its inquiry would examine all available information.
+   Status: needs verification
+   Confidence: low
+   Priority: high
+   Sources:
+      - https://www.pbs.org/newshour/world/nvidia-investigates-whether-ceo-jensen-huang-was-targeted-by-chinese-spy-when-he-had-affair
+
+RECOMMENDED ACTION
+-----------------------------------------------------------------
+Employees are encouraged to review the developments and follow official company guidance where relevant.
+
+VERIFICATION NOTES
+-----------------------------------------------------------------
+- Analysis performed using rule-based Python processing.
+- No external language model was used.
+- Text similarity is only an initial comparison, not proof.
+- All claims should be checked against their original articles.
+
+IMPORTANT DISCLAIMER
+-----------------------------------------------------------------
+This briefing is generated using automated, rule-based text processing.
+Confidence labels are preliminary indicators and do not represent independent fact verification.
+Please consult the original articles before making decisions.
+
+Regards,
+AI News Assistant
+=================================================================
